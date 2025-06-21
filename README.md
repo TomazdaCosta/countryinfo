@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Countryinfo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre o projeto
 
-Currently, two official plugins are available:
+O projeto trata-se de um app desenvolvido para dispositivos mobile e desktop, onde seu objetivo é mostrar ao usuário ifnormações sobre os países do mundo. Ele disponibiliza informações como a bandeira do país, capital, população, países com quem faz fronteira, entre outras informações.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Acesse o site
 
-## Expanding the ESLint configuration
+[https://tomazdacosta.github.io/countryinfo/](https://tomazdacosta.github.io/countryinfo/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tecnologias utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- REACT
+- TYPESCRIPT
+- TAILWIND CSS
+- API Rest
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## API utilizada
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- REST Countries
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Layout Web
+
+![WhatsApp Image 2025-06-21 at 6 18 05 PM](https://github.com/user-attachments/assets/3ca8afd2-fa6e-4041-8d2e-2352f47cb12a)
+![WhatsApp Image 2025-06-21 at 6 20 39 PM](https://github.com/user-attachments/assets/fdc7e407-43ec-40a3-9e16-1063e207f82d)
+![WhatsApp Image 2025-06-21 at 6 19 22 PM](https://github.com/user-attachments/assets/110d4d07-f868-48c5-965e-da50ddcb52c4)
+
+## Layout Mobile
+
+![WhatsApp Image 2025-06-21 at 6 19 59 PM](https://github.com/user-attachments/assets/f13bf4d3-e607-427c-8c56-1a279f021be2)![WhatsApp Image 2025-06-21 at 6 21 38 PM](https://github.com/user-attachments/assets/c922f8a0-b620-4f55-bb66-d6a05f919faf)![WhatsApp Image 2025-06-21 at 6 21 55 PM](https://github.com/user-attachments/assets/e354f6f4-9684-4edd-833d-89ff1d0a220a)
+
+## Autor
+
+Tomaz Costa
+
+- LinkedIn: https://www.linkedin.com/in/tomaz-costa-a013a530b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
