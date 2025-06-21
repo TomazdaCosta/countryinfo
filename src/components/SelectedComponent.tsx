@@ -7,9 +7,9 @@ type SelectedProps = React.ComponentProps<'select'> & {
 const SelectedComponent = ({value, func}: SelectedProps) => {
   return (
     <div className='grid'>
-      <label className='font-mono uppercase text-sm justify-self-end' htmlFor="ling">Idioma</label>
+      <label className='font-mono uppercase text-sm justify-self-end' htmlFor="ling">Nome dos países em</label>
       <select
-        className='bg-blue-200 max-w-max text-blue-950 pt-1 pb-1 pl-2 rounded-2xl'
+        className='bg-blue-200 max-w-max text-blue-950 pt-1 pb-1 pl-2 rounded-2xl justify-self-end'
         name="ling"
         id="ling"
         value={value}

@@ -139,6 +139,12 @@ type Country = {
   },
   area: number,
   independent: boolean,
+  translations: {
+    [key: string]: {
+      common: string,
+      official: string,
+    }
+  }
 }
 
 type ICountriesContext = {

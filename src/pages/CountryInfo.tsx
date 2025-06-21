@@ -4,7 +4,7 @@ import { CountriesContext } from '../context/CountriesContext'
 
 const CountryInfo = () => {
   const {countryName} = useParams()
-  const {country, getCountry} = React.useContext(CountriesContext)
+  const {country, getCountry, ling} = React.useContext(CountriesContext)
 
   React.useEffect(() => {
     if(countryName) {
@@ -22,7 +22,7 @@ const CountryInfo = () => {
       {country.map((countrySelected) => (
         <div className='grid sm:grid-cols-2' key={countrySelected.name.common}>
           <div className='mb-2 mt-4 sm:mb-4 sm:mt-8'>
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl'>{countrySelected.name.common}</h2>
+            <h2 className='text-3xl sm:text-4xl lg:text-5xl'>{countrySelected.translations[ling].common}</h2>
           </div>
           <div className='col-start-1 max-w-150 sm:max-w-none'>
             <img src={countrySelected.flags.svg} alt={countrySelected.flags.alt} />
