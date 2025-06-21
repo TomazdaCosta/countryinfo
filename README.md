@@ -27,9 +27,7 @@ O projeto trata-se de um app desenvolvido para dispositivos mobile e desktop, on
 
 ## Layout Mobile
 
-![WhatsApp Image 2025-06-21 at 6 19 59 PM](https://github.com/user-attachments/assets/f13bf4d3-e607-427c-8c56-1a279f021be2)
-![WhatsApp Image 2025-06-21 at 6 21 38 PM](https://github.com/user-attachments/assets/c922f8a0-b620-4f55-bb66-d6a05f919faf)
-![WhatsApp Image 2025-06-21 at 6 21 55 PM](https://github.com/user-attachments/assets/e354f6f4-9684-4edd-833d-89ff1d0a220a)
+![WhatsApp Image 2025-06-21 at 6 19 59 PM](https://github.com/user-attachments/assets/f13bf4d3-e607-427c-8c56-1a279f021be2)![WhatsApp Image 2025-06-21 at 6 21 38 PM](https://github.com/user-attachments/assets/c922f8a0-b620-4f55-bb66-d6a05f919faf)![WhatsApp Image 2025-06-21 at 6 21 55 PM](https://github.com/user-attachments/assets/e354f6f4-9684-4edd-833d-89ff1d0a220a)
 
 ## Autor
 
