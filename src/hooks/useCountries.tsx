@@ -6,7 +6,7 @@ export function useCountries() {
 
   React.useEffect(() => {
     async function fetchCountries() {
-      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flag,flags')
+      const response = await fetch('https://restcountries.com/v3.1/all?fields=name,flag,flags,translations')
       const data: Countries[] = await response.json()
       setCountries(data)
   }

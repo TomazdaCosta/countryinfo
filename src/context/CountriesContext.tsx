@@ -9,6 +9,12 @@ export type Countries = {
     svg: string,
     alt: string,
   },
+  translations: {
+    [key: string]: {
+      common: string,
+      official: string,
+    }
+  }
 }
 
 type Country = {
@@ -141,6 +147,8 @@ type ICountriesContext = {
   changeInoutValue: (value: string) => void,
   country: Country[],
   getCountry: (country: string) => void,
+  ling: string,
+  changeLing: (lingName: string) => void,
 }
 
 export const CountriesContext = React.createContext<ICountriesContext>({} as ICountriesContext)
@@ -150,6 +158,7 @@ export const CountriesContextProvider = ({children}: React.PropsWithChildren) =>
   const allCountries = useCountries()
   const [inputValue, setInputValue] = React.useState<string>('')
   const [country, setCountry] = React.useState<Country[]>([])
+  const [ling, setLing] = React.useState('por')
 
   const changeInoutValue = (value: string) => {
     setInputValue(value)
@@ -167,15 +176,19 @@ export const CountriesContextProvider = ({children}: React.PropsWithChildren) =>
 
   React.useEffect(() => {
     if(inputValue !== '') {
-      setCountries(allCountries.countries.filter(country => country.name.common.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())))
+      setCountries(allCountries.countries.filter(country => country.translations[ling].common.normalize("NFD").replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase().includes(inputValue.toLocaleLowerCase())))
     } else if(inputValue === '') {
       setCountries(allCountries.countries)
     }
 
   }, [inputValue])
 
+  const changeLing = (lingName: string) => {
+    setLing(lingName)
+  }
+
   return (
-    <CountriesContext.Provider value={{countries, inputValue, changeInoutValue, country, getCountry}}>
+    <CountriesContext.Provider value={{countries, inputValue, changeInoutValue, country, getCountry, ling, changeLing}}>
       {children}
     </CountriesContext.Provider>
   )

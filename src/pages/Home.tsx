@@ -3,12 +3,16 @@ import { CountriesContext } from '../context/CountriesContext'
 import InputComponent from '../components/InputComponent'
 import { Link } from 'react-router-dom'
 import CountryCard from '../components/CountryCard'
+import SelectedComponent from '../components/SelectedComponent'
 
 const Home = () => {
-  const {countries, inputValue, changeInoutValue} = React.useContext(CountriesContext)
+  const {countries, inputValue, changeInoutValue, ling, changeLing} = React.useContext(CountriesContext)
 
   return (
-    <div className='grid pt-2 pr-2 pl-2 mb-8 sm:pt-4 sm:pr-4 sm:pl-4 lg:pt-8 lg:pr-8 lg:pl-8'>
+    <div className='grid pt-1 pr-2 pl-2 mb-8 sm:pt-2 sm:pr-4 sm:pl-4 lg:pt-6 lg:pr-8 lg:pl-8'>
+      <div className='mb-2 grid justify-items-end'>
+        <SelectedComponent value={ling} func={changeLing} />
+      </div>
       <div className='justify-self-center grid gap-4 mb-8'>
         <h2 className='text-xl sm:text-2xl'><span className='mr-4'>🌍</span>Explore os países do mundo</h2>
         <InputComponent value={inputValue} func={changeInoutValue} />
@@ -16,7 +20,7 @@ const Home = () => {
       <div className='grid grid-cols-2 gap-4 mb-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'>
         {countries.map((country) => (
           <Link className='bg-gray-50 p-4 grid' to={`/pais/${country.name.common.toLocaleLowerCase()}`} key={country.name.common}>
-            <CountryCard name={country.name.common} flag={country.flags.svg} alt={country.flags.alt} />
+            <CountryCard name={country.translations[ling].common} flag={country.flags.svg} alt={country.flags.alt} />
           </Link>
         ))}
       </div>
