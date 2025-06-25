@@ -1,3 +1,4 @@
+
 import React from "react"
 import { useCountries } from "../hooks/useCountries"
 
@@ -17,7 +18,7 @@ export type Countries = {
   }
 }
 
-type Country = {
+export type Country = {
   name: {
     common: string,
     official: string,
@@ -155,12 +156,14 @@ type ICountriesContext = {
   getCountry: (country: string) => void,
   ling: string,
   changeLing: (lingName: string) => void,
+  loading: boolean,
+  error: null | string
 }
 
 export const CountriesContext = React.createContext<ICountriesContext>({} as ICountriesContext)
 
 export const CountriesContextProvider = ({children}: React.PropsWithChildren) => {
-  const {countries, setCountries} = useCountries()
+  const {countries, setCountries, loading, error} = useCountries()
   const allCountries = useCountries()
   const [inputValue, setInputValue] = React.useState<string>('')
   const [country, setCountry] = React.useState<Country[]>([])
@@ -194,7 +197,7 @@ export const CountriesContextProvider = ({children}: React.PropsWithChildren) =>
   }
 
   return (
-    <CountriesContext.Provider value={{countries, inputValue, changeInoutValue, country, getCountry, ling, changeLing}}>
+    <CountriesContext.Provider value={{countries, loading, error, inputValue, changeInoutValue, country, getCountry, ling, changeLing}}>
       {children}
     </CountriesContext.Provider>
   )
